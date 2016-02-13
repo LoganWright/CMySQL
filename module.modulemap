@@ -1,5 +1,11 @@
-module CMySQL [system] {
+module CMySQLLinux [system] {
     header "/usr/include/mysql/mysql.h"
+    link "mysqlclient"
+    export *
+}
+
+module CMySQLMac [system] {
+    header "/usr/local/opt/mysql/include/mysql/mysql.h"
     link "mysqlclient"
     export *
 }
